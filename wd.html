@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gujcet Mock Test Of UTU</title>
+    <style>
+      /* Style the body of the page */
+      body {
+        background-color: #f2f2f2;
+      }
+
+      /* Style the form */
+      form {
+        background-color: #fff;
+        width: 50%;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Style the labels */
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      /* Style the text input */
+      input[type="text"] {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      /* Style the select box */
+      select {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      /* Style the checkbox */
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      /* Style the submit and reset buttons */
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Style the submit button on hover */
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      /* Style the reset button on hover */
+      input[type="reset"]:hover {
+        background-color: #f44336;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="example-form">
+    <label for="text-input">Your Sweet Name:</label>
+      <input type="text" id="text-name" name="text-input" placeholder="Enter Your Sweet Name">
+      <label for="text-input">Exam Center Name:</label>
+      <input type="text" id="text-input" name="text-input" placeholder="Enter Your Exam Center Name">
+
+      <label for="select-box">Favorite Subject:</label>
+      <select id="select-box" name="select-box">
+        <option value="option1">Chemistry Lover</option>
+        <option value="option2">Physics Lover</option>
+        <option value="option3">Maths Lover</option>
+        <option value="option3">Biology Lover</option>
+      </select>
+
+      <label for="checkbox">Drop Out Student:
+      <input type="checkbox" id="checkbox" name="checkbox"></label>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+
+    <script>
+      const form = document.getElementById("example-form");
+      const textname=document.getElementById("text-name");
+      const textInput = document.getElementById("text-input");
+      const selectBox = document.getElementById("select-box");
+      const checkbox = document.getElementById("checkbox");
+        
+      // Event listener for focus event on text input
+        textname.addEventListener("focus", (event) => {
+        console.log(`Entered value: ${event.target.value}`);
+      });
+      // Event listener for focus event on text input
+      textInput.addEventListener("focus", (event) => {
+        console.log(`Entered value: ${event.target.value}`);
+      });
+
+      // Event listener for focus event on select box
+      selectBox.addEventListener("focus", (event) => {
+        console.log(`Selected option: ${event.target.value}`);
+      });
+
+      // Event listener for focus event on checkbox
+      checkbox.addEventListener("focus", (event) => {
+        console.log(`Checkbox state: ${event.target.checked}`);
+      });
+
+      // Event listener for form submission
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // prevent default form submission behavior
+        console.log("Form submitted!");
+        // additional code to handle form submission
+      });
+
+      // Event listener for form reset
+      form.addEventListener("reset", (event) => {
+        console.log("Form reset!");
+        // additional code to handle form reset
+      });
+    </script>
+  </body>
+</html>
